@@ -9,6 +9,10 @@ class SampleTest {
         Sample sample = new Sample();
         assertEquals(3, sample.op(Sample.Operation.ADD, 1, 2));
         assertEquals(6, sample.op(Sample.Operation.MULT, 2, 3));
+        assertEquals(1, sample.op(Sample.Operation.ADD, -1, 2));
+        assertEquals(-6, sample.op(Sample.Operation.ADD, -8, 2));
+        assertEquals(-6, sample.op(Sample.Operation.MULT, -2, 3));
+        assertEquals(0.5, sample.op(Sample.Operation.MULT, 1, 2));
     }
 
     @org.junit.jupiter.api.Test
